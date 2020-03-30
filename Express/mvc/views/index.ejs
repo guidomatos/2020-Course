@@ -1,0 +1,20 @@
+<%- include('partials/header.ejs'); %>
+
+    <h1><%= title %></h1>
+
+    <h2>Hello, Express</h2>
+    <p>Welcome to <%= title %></p>
+
+    <a href="/register" class="btn">Crear una cuenta</a>
+
+    <div class="link-section">
+      <a href="/users">Ver todos los usuarios</a>
+      <a href="/users/asdasdwq">Ver usuario al azar</a>
+    </div>
+
+    <div class="link-section">
+      <a href="/posts">Ver todos los posts</a>
+      <a href="/posts/3783">Ver post al azar</a>
+    </div>
+
+<%- include('partials/footer.ejs'); %>

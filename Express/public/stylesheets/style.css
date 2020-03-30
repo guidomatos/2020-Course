@@ -27,4 +27,60 @@ a {
   a:hover {
     opacity: .7; }
 
+.btn {
+  background-color: #FF5733;
+  color: white;
+  display: inline-block;
+  padding: .6em 2.4em;
+  margin: 20px 0;
+  border-radius: 4px; }
+
+form ::placeholder {
+  color: inherit; }
+
+form input {
+  width: 400px;
+  font-size: 18px;
+  color: #FF5733;
+  display: block;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid;
+  margin: 46px 0;
+  padding: 6px 14px; }
+
+form input[type="submit"] {
+  background-color: #FF5733;
+  color: white;
+  border-radius: 4px;
+  width: max-content;
+  font-size: 20px;
+  padding: .6em 3em; }
+  form input[type="submit"]:hover {
+    opacity: .6; }
+
+form input:first-of-type {
+  margin-top: 0; }
+
+.link-section {
+  margin-top: 22px; }
+  .link-section a {
+    margin-left: 8px; }
+
+#examples h2 {
+  margin: 28px 0 0; }
+
+#examples p {
+  width: 800px; }
+
+#examples ol {
+  padding: 0; }
+
+#examples li {
+  margin: 10px 18px;
+  display: list-item;
+  list-style-position: inside; }
+  #examples li li {
+    margin-left: 32px; }
+
 /*# sourceMappingURL=style.css.map */

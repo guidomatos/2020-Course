@@ -32,3 +32,67 @@ a {
     opacity: .7;
   }
 }
+
+
+@mixin invert-color {
+  background-color: $color;
+  color: white;
+}
+
+.btn {
+  @include invert-color();
+
+  display: inline-block;
+  padding: .6em 2.4em;
+  margin: 20px 0;
+  border-radius: 4px;
+}
+
+form {
+
+  ::placeholder { color: inherit; }
+
+  input {
+    width: 400px;
+    font-size: 18px;
+    color: $color;
+    display: block;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid;
+    margin: 46px 0;
+    padding: 6px 14px;
+  }
+
+  input[type="submit"] {
+    @include invert-color();
+    border-radius: 4px;
+    width: max-content;
+    font-size: 20px;
+    padding: .6em 3em;
+
+    &:hover {
+      opacity: .6;
+    }
+  }
+
+  input:first-of-type { margin-top: 0; }
+
+}
+
+.link-section {
+  margin-top: 22px;
+  a { margin-left: 8px; }
+}
+
+#examples {
+  h2 { margin: 28px 0 0; }
+  p { width: 800px; }
+  ol { padding: 0; }
+  li {
+    margin: 10px 18px;
+    display: list-item;
+    list-style-position: inside;
+    li { margin-left: 32px; }
+  }
+}

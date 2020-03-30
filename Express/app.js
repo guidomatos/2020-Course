@@ -5,12 +5,13 @@ const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const sassMiddleware = require('node-sass-middleware');
 
-const indexRouter = require('./routes/index');
+const indexRouter = require('./mvc/routes/index');
+const postsRouter = require('./mvc/routes/posts');
 
-var app = express();
+const app = express();
 
 // view engine setup
-app.set('views', path.join(__dirname, 'views'));
+app.set('views', path.join(__dirname, 'mvc', 'views'));
 app.set('view engine', 'ejs');
 
 app.use(logger('dev'));
@@ -25,6 +26,8 @@ app.use(sassMiddleware({
 }));
 app.use(express.static(path.join(__dirname, 'public')));
 
+
+app.use('/', postsRouter);
 app.use('/', indexRouter);
 
 // catch 404 and forward to error handler
